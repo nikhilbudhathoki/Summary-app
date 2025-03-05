@@ -2,13 +2,8 @@ import streamlit as st
 import requests
 import os
 import time
-from dotenv import load_dotenv
+API_KEY = st.secrets["API_KEY"]
 
-load_dotenv()
-
-# Define Hugging Face API details
-API_URL = "https://api-inference.huggingface.co/models/facebook/mbart-large-50"
-API_KEY = os.getenv("API_KEY")
 
 # Function to call Hugging Face API with retries
 def query_huggingface_api(text: str, target_word_count: int, max_retries=3, retry_delay=2):
