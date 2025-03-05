@@ -3,6 +3,7 @@ import requests
 import os
 import time
 API_KEY = st.secrets["API_KEY"]
+API_URL=st.secrets['API_URL']
 
 
 # Function to call Hugging Face API with retries
